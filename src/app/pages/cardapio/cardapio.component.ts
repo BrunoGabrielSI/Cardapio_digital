@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Pipe, PipeTransform } from '@angular/core';
+import { CategoriaCorPipe } from '../../pipes/categoria-cor.pipe';
 
-@Pipe({
-  name: 'categoriaCor',
-  standalone: true
+@Component({
+  selector: 'app-cardapio',
+  standalone: true,
+  templateUrl: './cardapio.component.html',
+  styleUrls: ['./cardapio.component.scss'],
+  imports: [CommonModule, CategoriaCorPipe]
 })
-export class CategoriaCorPipe implements PipeTransform {
-  transform(value: string): string {
-    // logic here
-    return '';
-  }
-}
 
 interface Prato {
   nome: string;
